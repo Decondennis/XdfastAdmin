@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> My Purse | xdFastComm </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="description" content="">
+	<meta name="keywords" content="cash, xdFastComm, admin, money">
+	<meta name="author" content="xdFastComm ">
+
+	<!-- Base Css Files -->
+	<link href="assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+	<link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="assets/libs/fontello/css/fontello.css" rel="stylesheet" />
+	<link href="assets/libs/animate-css/animate.min.css" rel="stylesheet" />
+	<link href="assets/libs/nifty-modal/css/component.css" rel="stylesheet" />
+	<link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" />
+	<link href="assets/libs/ios7-switch/ios7-switch.css" rel="stylesheet" />
+	<link href="assets/libs/pace/pace.css" rel="stylesheet" />
+	<link href="assets/libs/sortable/sortable-theme-bootstrap.css" rel="stylesheet" />
+	<link href="assets/libs/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+	<link href="assets/libs/jquery-icheck/skins/all.css" rel="stylesheet" />
+	<!-- Code Highlighter for Demo -->
+	<link href="assets/libs/prettify/github.css" rel="stylesheet" />
+
+	<!-- Extra CSS Libraries Start -->
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/materialform.css" rel="stylesheet" type="text/css" />
+	<!-- Extra CSS Libraries End -->
+	<link href="assets/css/style-responsive.css" rel="stylesheet" />
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png" />
+</head>
+
+<body class="fixed-left">
+	<!-- Modal Start -->
+	<!-- Modal Task Progress -->
+	<div class="md-modal md-3d-flip-vertical" id="task-progress">
+		<div class="md-content">
+			<h3><strong>Task Progress</strong> Information</h3>
+			<div>
+				<p>CLEANING BUGS</p>
+				<div class="progress progress-xs for-modal">
+					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"
+						aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						<span class="sr-only">80&#37; Complete</span>
+					</div>
+				</div>
+				<p>POSTING SOME STUFF</p>
+				<div class="progress progress-xs for-modal">
+					<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80"
+						aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+						<span class="sr-only">65&#37; Complete</span>
+					</div>
+				</div>
+				<p>BACKUP DATA FROM SERVER</p>
+				<div class="progress progress-xs for-modal">
+					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+						aria-valuemax="100" style="width: 95%">
+						<span class="sr-only">95&#37; Complete</span>
+					</div>
+				</div>
+				<p>RE-DESIGNING WEB APPLICATION</p>
+				<div class="progress progress-xs for-modal">
+					<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80"
+						aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+						<span class="sr-only">100&#37; Complete</span>
+					</div>
+				</div>
+				<p class="text-center">
+					<button class="btn btn-danger btn-sm md-close">Close</button>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Logout -->
+	<div class="md-modal md-just-me" id="logout-modal">
+		<div class="md-content">
+			<h3><strong>Logout</strong> Confirmation</h3>
+			<div>
+				<p class="text-center">Are you sure want to logout from this awesome system?</p>
+				<p class="text-center">
+					<button class="btn btn-danger md-close">Nope!</button>
+					<a href="login.html" class="btn btn-success md-close">Yeah, I'm sure</a>
+				</p>
+			</div>
+		</div>
+	</div> <!-- Modal End -->
+	<!-- Begin page -->
+	<div id="wrapper">
+
+		<!-- Top Bar Start -->
+		<div class="topbar">
+			<div class="topbar-left">
+				<div class="logo">
+					<h1><a href="#"><img src="assets/img/logo.png" alt="Logo"></a></h1>
+				</div>
+				<button class="button-menu-mobile open-left">
+					<i class="fa fa-bars"></i>
+				</button>
+			</div>
+			<!-- Button mobile view to collapse sidebar menu -->
+			<div class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-collapse2">
+
+						<ul class="nav navbar-nav navbar-right top-navbar">
+							<li class="dropdown iconify hide-phone">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+										class="fa fa-globe"></i><span class="label label-danger absolute">4</span></a>
+								<ul class="dropdown-menu dropdown-message">
+									<li class="dropdown-header notif-header"><i class="icon-bell-2"></i> New
+										Notifications<a class="pull-right" href="#"><i class="fa fa-cog"></i></a></li>
+									<li class="unread">
+										<a href="#">
+											<p><strong>John Doe</strong> Uploaded a photo
+												<strong>&#34;DSC000254.jpg&#34;</strong>
+												<br /><i>2 minutes ago</i>
+											</p>
+										</a>
+									</li>
+									<li class="unread">
+										<a href="#">
+											<p><strong>John Doe</strong> Created an photo album
+												<strong>&#34;Fappening&#34;</strong>
+												<br /><i>8 minutes ago</i>
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<p><strong>John Malkovich</strong> Added 3 products
+												<br /><i>3 hours ago</i>
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<p><strong>Sonata Arctica</strong> Send you a message <strong>&#34;Lorem
+													ipsum dolor...&#34;</strong>
+												<br /><i>12 hours ago</i>
+											</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<p><strong>Johnny Depp</strong> Updated his avatar
+												<br /><i>Yesterday</i>
+											</p>
+										</a>
+									</li>
+									<li class="dropdown-footer">
+										<div class="btn-group btn-group-justified">
+											<div class="btn-group">
+												<a href="#" class="btn btn-sm btn-primary"><i class="icon-ccw-1"></i>
+													Refresh</a>
+											</div>
+											<div class="btn-group">
+												<a href="#" class="btn btn-sm btn-danger"><i class="icon-trash-3"></i>
+													Clear All</a>
+											</div>
+											<div class="btn-group">
+												<a href="#" class="btn btn-sm btn-success">See All <i
+														class="icon-right-open-2"></i></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown iconify hide-phone">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+										class="fa fa-envelope"></i><span
+										class="label label-danger absolute">3</span></a>
+								<ul class="dropdown-menu dropdown-message">
+									<li class="dropdown-header notif-header"><i class="icon-mail-2"></i> New Messages
+									</li>
+									<li class="unread">
+										<a href="#" class="clearfix">
+											<img src="images/users/chat/2.jpg" class="xs-avatar ava-dropdown"
+												alt="Avatar">
+											<strong>John Doe</strong><i class="pull-right msg-time">5 minutes
+												ago</i><br />
+											<p>Duis autem vel eum iriure dolor in hendrerit ...</p>
+										</a>
+									</li>
+									<li class="unread">
+										<a href="#" class="clearfix">
+											<img src="images/users/chat/1.jpg" class="xs-avatar ava-dropdown"
+												alt="Avatar">
+											<strong>Sandra Kraken</strong><i class="pull-right msg-time">22 minutes
+												ago</i><br />
+											<p>Duis autem vel eum iriure dolor in hendrerit ...</p>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="images/users/chat/3.jpg" class="xs-avatar ava-dropdown"
+												alt="Avatar">
+											<strong>Zoey Lombardo</strong><i class="pull-right msg-time">41 minutes
+												ago</i><br />
+											<p>Duis autem vel eum iriure dolor in hendrerit ...</p>
+										</a>
+									</li>
+									<li class="dropdown-footer">
+										<div class=""><a href="#" class="btn btn-sm btn-block btn-primary"><i
+													class="fa fa-share"></i> See all messages</a></div>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown iconify hide-phone"><a href="#"
+									onclick="javascript:toggle_fullscreen()"><i class="icon-resize-full-2"></i></a></li>
+							<li class="dropdown topbar-profile">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+										class="rounded-image topbar-profile-image"><img
+											src="images/users/user-35.jpg"></span> Admin <strong>Name</strong> <i
+										class="fa fa-caret-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">My Profile</a></li>
+									<li><a href="#">Change Password</a></li>
+									<li><a href="#">Account Setting</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="icon-help-2"></i> Help</a></li>
+									<li><a href="lockscreen.html"><i class="icon-lock-1"></i> Lock me</a></li>
+									<li><a class="md-trigger" data-modal="logout-modal"><i class="icon-logout-1"></i>
+											Logout</a></li>
+								</ul>
+							</li>
+							<li class="right-opener">
+								<a href="javascript:;" class="open-right"><i class="fa fa-angle-double-left"></i><i
+										class="fa fa-angle-double-right"></i></a>
+							</li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+		<!-- Top Bar End -->
+		<!-- Left Sidebar Start -->
+		<div class="left side-menu">
+			<div class="sidebar-inner slimscrollleft">
+				<!-- Search form -->
+				<form role="search" class="navbar-form">
+					<div class="form-group">
+						<input type="text" placeholder="Search" class="form-control">
+						<button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
+					</div>
+				</form>
+				<div class="clearfix"></div>
+				<!--- Profile -->
+				<div class="profile-info">
+					<div class="col-xs-4">
+						<a href="profile.html" class="rounded-image profile-image"><img
+								src="images/users/user-100.jpg"></a>
+					</div>
+					<div class="col-xs-8">
+						<br>
+						<div class="profile-text">Hello <b>Admin</b></div>
+					</div>
+				</div>
+				<!--- Divider -->
+				<div class="clearfix"></div>
+				<hr class="divider" />
+				<div class="clearfix"></div>
+				<!--- Divider -->
+				<div id="sidebar-menu">
+					<ul>
+						<li><a href='http://xdfastcomm.kreativestylez.com/'><i class='glyphicon glyphicon-globe'></i>
+								<span>Website<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li><a href='index.html'><i class='glyphicon glyphicon-tasks'></i>
+								<span>Dashboard<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li class='has_sub'><a href='javascript:void(0);'><i class='icon-credit-card'></i>
+							<span>Akawo</span> <span class="pull-right">
+								<i class="fa fa-angle-down"></i></span></a>
+						<ul>
+							<li><a href='akawo-dashboard.html'><span>Akawo Dashboard</span></a></li>
+							<li><a href='akawo-e-money.html'><span>Akawo e-money</span></a></li>
+							<li><a href='akawo-package.html'><span>Akawo Package</span></a></li>
+							<li><a href='akawo-package.html'><span>Fund Withdrawal</span></a></li>
+							<li><a href='buy-e-money.html'><span>Buy e-money</span></a></li>
+							<li><a href='emergency-withdrawal.html'><span>Emergency Withdrawal</span></a></li>
+							<li><a href='fund-withdrawal.html'><span>Fund Withdrawal</span></a></li>
+							<li><a href='save-akawo.html'><span>Save Akawo</span></a></li>
+							<li><a href='view-akawo-report.html'><span>View Akawo Report</span></a>
+							</li>
+						</ul>
+					</li>
+						<li class='has_sub'><a href='javascript:void(0);'><i class='icon-ccw-1'></i>
+								<span>Recharge/Subscribe </span> <span class="pull-right">
+									<i class="fa fa-angle-down"></i></span></a>
+							<ul>
+								<li><a href='airtime-data.html'><span>Airtime/Data</span></a></li>
+								<li><a href='paytv.html'><span>PayTv</span></a></li>
+								<li><a href='electricity.html'><span>Electricity</span></a></li>
+							</ul>
+						</li>
+						<li><a href='purchase-history.html'><i class='glyphicon glyphicon-stats'></i>
+								<span>Purchase History<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li class='has_sub'><a href='javascript:void(0);'><i class='icon-vcard'></i><span>
+									My e-money </span> <span class="pull-right">
+									<i class="fa fa-angle-down"></i></span></a>
+							<ul>
+								<li><a href='buy-emoney.html'><span>Buy e-money</span></a></li>
+								<li><a href='purse-transfer.html'><span>Purse Transfer</span></a></li>
+								<li><a href='e-money-transfer.html'><span>e-money Transfer</span></a></li>
+								<li><a href='e-money-history.html'><span>e-money History</span></a></li>
+								<li><a href='transaction-history.html'><span>Transaction History</span></a></li>
+								<li><a href='my-purse.html' class="active"><span>My purse</span></a></li>
+							</ul>
+						</li>
+						<li><a href='sponsored-members.html'><i class='icon-users'></i>
+								<span>Sponsored Members<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li><a href='referred-members.html'><i class='icon-user-1'></i>
+								<span>Referred Members<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li class='has_sub'><a href='javascript:void(0);'><i class='icon-credit-card'></i>
+								<span>Fund Cashback </span> <span class="pull-right">
+									<i class="fa fa-angle-down"></i></span></a>
+							<ul>
+								<li><a href='cashback-request.html'><span>Cashback Request</span></a></li>
+								<li><a href='pending-requests.html'><span>Pending Requests</span></a></li>
+								<li><a href='cashback-history.html'><span>Cashback History</span></a></li>
+							</ul>
+						</li>
+						<li><a href='my-bank.html'><i class='icon-home'></i>
+								<span>My Bank<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li><a href='flight-booking.html'><i class='icon-flight'></i>
+								<span>Flight Booking<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li><a href='fund-transfer.html'><i class='icon-share'></i>
+								<span>Fund Transfer<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li><a href='http://xdfastcomm.kreativestylez.com/signup.html'><i class='icon-cc-nd'></i>
+								<span>Register<span class="sideBarMenuArrowRight">></span></span></a>
+						</li>
+						<li class='has_sub'><a href='javascript:void(0);'><i class='icon-th'></i>
+								<span>Foreign</span> <span class="pull-right">
+									<i class="fa fa-angle-down"></i></span></a>
+							<ul>
+								<li><a href='foreign-airtime-data.html'><span>Airtime/Data</span></a></li>
+								<li><a href='foreign-paytv.html'><span>PayTv</span></a></li>
+								<li><a href='foreign-electricity.html'><span>Electricity</span></a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="clearfix"></div><br><br><br>
+			</div>
+		</div>
+
+		<!-- Right Sidebar Start -->
+		<div class="right side-menu">
+			<ul class="nav nav-tabs nav-justified" id="right-tabs">
+				<li><a href="#settings" data-toggle="tab" title="Preferences"><i class="icon-wrench"></i></a></li>
+			</ul>
+			<div class="clearfix"></div>
+			<div class="tab-pane" id="settings">
+				<div class="tab-inner slimscroller">
+					<div class="col-sm-12">
+						<h3>Preferences</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								Live data updates
+							</div>
+							<div class="col-xs-4">
+								<input type="checkbox" class="ios-switch ios-switch-success ios-switch-sm" checked />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8">
+								Live feeds
+							</div>
+							<div class="col-xs-4">
+								<input type="checkbox" class="ios-switch ios-switch-success ios-switch-sm" checked />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8">
+								Sync data to cloud
+							</div>
+							<div class="col-xs-4">
+								<input type="checkbox" class="ios-switch ios-switch-success ios-switch-sm" checked />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8">
+								Keep activity record
+							</div>
+							<div class="col-xs-4">
+								<input type="checkbox" class="ios-switch ios-switch-danger ios-switch-sm" checked />
+							</div>
+						</div>
+						<h4>Other Settings</h4>
+						<div class="row">
+							<div class="col-xs-12">
+								<label class="checkboxw"><input type="checkbox" checked> Autosave settings</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<label class="checkboxw"><input type="checkbox"> Always online</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Right Sidebar End -->
+		<!-- Start right content -->
+		<div class="content-page">
+			<!-- ============================================================== -->
+			<!-- Start Content here -->
+			<!-- ============================================================== -->
+			<div class="content">
+				<div class="col-md-12 portlets">
+					<h2>My Purse</h2>
+					<div class="widget">
+						<div class="widget-header ">
+							<h2></h2>
+							<div class="additional-btn">
+								<a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
+							</div>
+						</div>
+						<div class="widget-content padding">
+
+							<div class="row">
+								<div class="col-sm-6">
+									<h4>Check out your total savings, it comprises of your top commissions, referral
+										bonuses and self
+										transfers.
+									</h4>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="widget green-1 animated fadeInDown" style="margin-left: -13px;">
+										<div class="widget-content padding">
+											<div class="widget-icon">
+												<i class="icon-doc-text"></i>
+											</div>
+											<div class="text-box">
+												<h4 style="color: #ffffff;"><br><b>Commision and Referral Bonuses</b></h4>
+												<h2>N<span class="animate-number" data-value="25153"
+														data-duration="3000">0</span>
+												</h2>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-12 portlets">
+					</div>
+				</div>
+
+				<!-- Footer Start -->
+				<footer>
+					xdFastComm &copy; 2020
+					<!-- <div class="footer-links pull-right">
+						<a href="#">About</a><a href="#">Support</a><a href="#">Terms of Service</a><a
+							href="#">Legal</a><a href="#">Help</a><a href="#">Contact Us</a>
+					</div> -->
+				</footer>
+				<!-- Footer End -->
+			</div>
+			<!-- ============================================================== -->
+			<!-- End content here -->
+			<!-- ============================================================== -->
+
+		</div>
+		<!-- End right content -->
+
+	</div>
+	<!-- End of page -->
+	<!-- the overlay modal element -->
+	<div class="md-overlay"></div>
+	<!-- End of eoverlay modal -->
+	<script>
+		var resizefunc = [];
+	</script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="assets/libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/libs/jquery-detectmobile/detect.js"></script>
+	<script src="assets/libs/jquery-animate-numbers/jquery.animateNumbers.js"></script>
+	<script src="assets/libs/ios7-switch/ios7.switch.js"></script>
+	<script src="assets/libs/fastclick/fastclick.js"></script>
+	<script src="assets/libs/jquery-blockui/jquery.blockUI.js"></script>
+	<script src="assets/libs/bootstrap-bootbox/bootbox.min.js"></script>
+	<script src="assets/libs/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<script src="assets/libs/jquery-sparkline/jquery-sparkline.js"></script>
+	<script src="assets/libs/nifty-modal/js/classie.js"></script>
+	<script src="assets/libs/nifty-modal/js/modalEffects.js"></script>
+	<script src="assets/libs/sortable/sortable.min.js"></script>
+	<script src="assets/libs/bootstrap-fileinput/bootstrap.file-input.js"></script>
+	<script src="assets/libs/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="assets/libs/bootstrap-select2/select2.min.js"></script>
+	<script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="assets/libs/pace/pace.min.js"></script>
+	<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="assets/libs/jquery-icheck/icheck.min.js"></script>
+
+	<!-- Demo Specific JS Libraries -->
+	<script src="assets/libs/prettify/prettify.js"></script>
+
+	<script src="assets/js/init.js"></script>
+	<script src="assets/js/pages/materialform.js"></script>
+</body>
+
+</html>
