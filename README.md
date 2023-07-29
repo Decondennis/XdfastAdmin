@@ -41,7 +41,7 @@ XDFastCommAdmin has been built using a robust and modern technology stack to del
 
     Font Awesome Icons: Enhancing the app's visual representation and user interface.
     Laminas Framework Stack: This includes various Laminas modules and components used to build the application.
-    Doctrine ORM and PHP.
+    Doctrine ORM, LARAVEL and PHP.
 
 XDFastCommAdmin is your ultimate solution for streamlined transaction management, empowering users to handle various services and transactions efficiently. Whether you're an individual seeking convenience or an administrator managing operations, XDFastCommAdmin caters to your needs with its feature-rich and user-centric design. www.xdfasx.com
 
